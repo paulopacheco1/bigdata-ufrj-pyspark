@@ -3,11 +3,11 @@ import time
 
 time.sleep(10)
 
-# sc = SparkContext('local[*]')
+sc = SparkContext('local[*]')
 
-conf = SparkConf()
-conf.setMaster('spark://spark:7077')
-sc = SparkContext(conf=conf)
+# conf = SparkConf()
+# conf.setMaster('spark://spark:7077')
+# sc = SparkContext(conf=conf)
 
 rdd = sc.parallelize(range(1000))
 
