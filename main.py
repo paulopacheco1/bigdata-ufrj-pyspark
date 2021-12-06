@@ -2,10 +2,7 @@ import PyPDF2
 import re
 import json
 import pymongo
-import time
 from pyspark import SparkContext, SparkConf
-
-time.sleep(5)
 
 # sc = SparkContext('local[*]')
 conf = SparkConf()
