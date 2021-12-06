@@ -25,6 +25,17 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
 
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin1324
+      MONGO_INITDB_DATABASE: projetoBigData
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db:/data/db
+
   pyspark:
     build: .
     volumes:
